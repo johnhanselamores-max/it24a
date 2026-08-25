@@ -6,9 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <h1>hansel</h1>
-    <h1>19 yrs old</h1>
-    <h1>single</h1>
+    
+    <h1>Todo List</h1>
+    <input type="Text"
+             id="taskInput"
+             placeholder="Add a task"
+    />
+    <button onclick="addTask()">Add Task</button>
+    <ul id="taskList"> Your tasks go here ....</ul>
+
+<script>
+function getTaskText(){
+        const input = document.getElementById('taskInput');
+        const text = input.value.trim();
+
+        console.log();("The input value list: " + input.value);
+        return text;
+}
+function addTask(){
+    getTaskText();
+}
+function addTaskItem(){
+    const li = document.createElement("li");
+    const taskSpan = document.createElemenet("Span");
+    li.appendChild(taskSpan);
+    document.getElementById('taskList').appendChild(li);
+
+}
+
+</script>
 </body>
 </html>
